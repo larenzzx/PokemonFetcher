@@ -1,0 +1,33 @@
+const [pokemons, setPokemons] = useState([]);
+
+  useEffect(() => {
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
+      .then(res => res.json()) // FIX: parse JSON
+      .then(async data => {
+        const detailedPokemons = await Promise.all(
+          data.results.map(async (pokemon) => {
+            const res = await fetch(pokemon.url); // fetch each pokemon detail
+            return res.json();
+          })
+        );
+        setPokemons(detailedPokemons); // set full detailed pokemons
+      })
+      .catch(error => console.error('Error fetching Pokémon:', error)); // optional: better error handling
+  }, []);
+
+  return (
+    <div>
+      <h1>Pokemon List</h1>
+      <ul style={{ listStyle: 'none' }}>
+        {pokemons.map(pokemon => (
+          <li key={pokemon.id}>
+            <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+            <p>{pokemon.name}</p>
+            <p>Height: {pokemon.height}</p> {/* Extra info */}
+            <p>Weight: {pokemon.weight}</p> {/* Extra info */}
+            <p>Base Experience: {pokemon.base_experience}</p> {/* Extra info */}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );

@@ -1,0 +1,12 @@
+const [name, setName] = useState("");
+
+  function handleChange(event) {
+    setName(event.target.value);
+  }
+
+  return (
+    <div>
+      <input className="input input-primary" type="text" value={name} onChange={handleChange} />
+      <p>Hello, {name}!</p>
+    </div>
+  );
