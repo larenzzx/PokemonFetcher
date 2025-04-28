@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 export const UFsample = () => {
   const [pokemon, setPokemon] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon/1") //fetches #1 pokemon / bulbasaur
@@ -9,14 +10,19 @@ export const UFsample = () => {
       .then((data) => { // saves the data
         console.log(data);
         setPokemon(data);
+        setLoading(false);
       });
+
+      // .then((data) => setPokemon(data))
   }, []);
 
   return (
     <div>
         <h1>Pokemon Data</h1>
-        {pokemon ? (
-            <div>
+        {loading ? (
+          <p>Loading ...</p>
+        ) : (
+          <div>
                 <p>Name: {pokemon.name}</p>
                 <p>Weight: {pokemon.weight}</p>
                 <p>Height: {pokemon.height}</p>
@@ -30,8 +36,6 @@ export const UFsample = () => {
                     </ul>
                 </div>
             </div>
-        ) : (
-            <p>Loading ...</p>
         )}
     </div>
   );

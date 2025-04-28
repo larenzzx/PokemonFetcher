@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
 function UserList() {
-  // ANS
   // Missing Dependency Array
 
   const [users, setUsers] = useState([]);
