@@ -9,12 +9,12 @@ import BugFour from "./bugActivity/BugFour";
 function App() {
   return (
     <>
-      <PokemonFetcher />
+      {/* <PokemonFetcher /> */}
       {/* <PokemonCard /> */}
       {/* <FetchPrac /> */}
 
       {/* ==== bug activity ==== */}
-      {/* <BugOne /> */}
+      <BugOne />
       {/* <BugTwo /> */} 
       {/* <BugThree />  */}
       {/* <BugFour />  */}

@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 function BugOne() {
  // Typing in the input should update the greeting below.
-  const [name, setName] = useState;
+  const [name, setName] = useState("");
 
   function handleChange(event) {
-    setName = event.target.value;
+    setName(event.target.value);
   }
 
   return (
