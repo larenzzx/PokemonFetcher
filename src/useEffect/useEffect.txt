@@ -1,0 +1,18 @@
+useEffect - a react hook
+          - lets you run code after the component renders
+
+often use it to:
+        - fetch api data
+        - update the DOM
+        - Set timers
+        - listen for events
+
+basic syntax
+
+-> useEffect(() => {
+
+}, []);
+
+What is fetch and .then?
+- fetch() gets data from api
+- .then() waits for the response and processes it

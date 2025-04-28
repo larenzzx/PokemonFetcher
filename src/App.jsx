@@ -1,6 +1,9 @@
-import { PokemonFetcher } from "./components/PokemonFetcher";
-import { PokemonCard } from "./components/PokemonCard";
-import { FetchPrac } from "./components/FetchPrac";
+import { UFsample } from "./useEffect/.then/ufSample";
+import { Pikachu } from "./useEffect/.then/Pikachu";
+import { PokemonFetcher } from "./useEffect/async/PokemonFetcher";
+import { PokemonCard } from "./useEffect/async/PokemonCard";
+import { PokemonList } from "./useEffect/.then/PokemonList";
+import { NameList } from "./useEffect/.then/NameList";
 import Counter from "./bugActivity/useState/Counter";
 import BugTwo from "./bugActivity/BugTwo";
 import BugThree from "./bugActivity/BugThree";
@@ -12,19 +15,28 @@ import CounterList from "./bugActivity/useState/CounterList";
 import UserList from "./bugActivity/useEffect/UserList";
 
 
+
 function App() {
   return (
     <>
+      {/* == useEffect sample === */}
+      {/* .then */}
+      {/* <UFsample /> */}
+      {/* <Pikachu /> */}
+      {/* <PokemonList /> */}
+      <NameList />
+
+      {/* async */}
       {/* <PokemonFetcher /> */}
       {/* <PokemonCard /> */}
-      {/* <FetchPrac /> */}
+
 
       {/* ==== bug activity ==== */}
       {/* <BugTwo />  */}
       {/* <BugThree />  */}
       {/* <BugFour />  */}
 
-      {/* useState bug exercise */}
+      {/* === useState bug exercise ===  */}
       {/* <Counter /> */}
       {/* <FruitList /> */}
       {/* <TodoList /> */}
@@ -32,7 +44,7 @@ function App() {
       {/* <CounterList /> */}
 
       {/* useEffect bug exercise */}
-      <UserList />
+      {/* <UserList /> */}
     </>
   );
 }
