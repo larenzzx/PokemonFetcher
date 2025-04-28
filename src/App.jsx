@@ -6,6 +6,8 @@ import BugTwo from "./bugActivity/BugTwo";
 import BugThree from "./bugActivity/BugThree";
 import BugFour from "./bugActivity/BugFour";
 import FruitList from "./bugActivity/useState/FruitList";
+import TodoList from "./bugActivity/useState/Todolist";
+import BookList from "./bugActivity/useState/BookList";
 
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
       {/* <BugFour />  */}
 
       {/* useState bug exercise */}
-      <FruitList />
+      {/* <FruitList /> */}
+      {/* <TodoList /> */}
+      <BookList />
     </>
   );
 }
