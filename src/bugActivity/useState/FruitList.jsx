@@ -8,6 +8,7 @@ function FruitList() {
 
   return (
     <div>
+      {/* BUG */}
       <h2>Fruits</h2>
       {fruits.map((fruit) => {
         <p>{fruit}</p>;

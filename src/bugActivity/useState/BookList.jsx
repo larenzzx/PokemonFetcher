@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 function BookList() {
+  // { == BUG == }
+
   const [books, setBooks] = useState(["1984", "Brave New World", "Dune"]);
 
   function deleteBook(index) {
